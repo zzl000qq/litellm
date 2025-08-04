@@ -1,0 +1,14 @@
+{
+  "builds": [
+    {
+      "src": "litellm/proxy/proxy_server.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "litellm/proxy/proxy_server.py"
+    }
+  ]
+}
